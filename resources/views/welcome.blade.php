@@ -9,3 +9,9 @@
 @else
     <p>Nada encontrado</p>
 @endif
+
+<form action="/adicionar-topico" method="POST">
+    @csrf
+    <input type="text" name="name" placeholder="Novo tópico">
+    <button type="submit">Add Tópico</button> 
+</form>
