@@ -8,7 +8,12 @@ class Topic extends Model
 {
     protected $fillable = [
         'name',
-        'completed'
+        'completed',
+        'user_id'
     ];
 
+    public function users()
+    {
+      return $this->beloongsTo(User::class);
+    }
 }
